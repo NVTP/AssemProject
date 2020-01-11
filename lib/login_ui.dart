@@ -1,3 +1,4 @@
+import 'package:assem_deal/customer/register_customer.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -14,7 +15,6 @@ class _LoginUIState extends State<LoginUI> {
   TextEditingController _password = new TextEditingController();
 
   bool showPW = true;
-  final key = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +59,7 @@ class _LoginUIState extends State<LoginUI> {
                              padding: const EdgeInsets.only(top: 20.0),
                              child: Column(
                                children: <Widget>[
-                                 Text('Sign In',style: TextStyle(color: Colors.red[200], fontSize: 30.0, fontWeight: FontWeight.bold),),
+                                 Text('Login',style: TextStyle(color: Colors.red[200], fontSize: 30.0, fontWeight: FontWeight.bold),),
                                  SizedBox(
                                    height: 10.0,
                                  ),
@@ -232,12 +232,17 @@ class _LoginUIState extends State<LoginUI> {
                            SizedBox(
                              width: 20.0,
                            ),
-                           InkWell(
-                             onTap: (){
+                           RaisedButton(
+                             elevation: 1.0,
+                             color: Colors.white,
+                             shape: RoundedRectangleBorder(
+                               borderRadius: BorderRadius.circular(20),
+                             ),
+                             onPressed: (){
+                              // print('OK');
                                //TODO
-                               //print('OK');
                              },
-                             child: Text('Register Now!',style: TextStyle(color: Colors.white, fontSize: 15.0, fontWeight: FontWeight.bold),),
+                             child: Text('Register Now', style: TextStyle(color: Colors.blueGrey,fontWeight: FontWeight.bold),),
                            ),
                          ],
                        ),
