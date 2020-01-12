@@ -41,23 +41,10 @@ class _RegisterShopState extends State<RegisterShop> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomPadding: false,
       appBar: AppBar(
-        title: Row(
-          children: <Widget>[
-            IconButton(
-              icon: Icon(
-                Icons.arrow_back_ios,
-              ),
-              color: Colors.white,
-              onPressed: (){},
-              alignment: Alignment.topLeft,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 60),
-              child: Text('Register Shop',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20.0),),
-            ),
-          ],
-        ),
+        centerTitle: true,
+       title: Text('Register Shop',style: TextStyle(color: Colors.white, fontSize: 20.0,fontWeight: FontWeight.bold),),
       ),
       body: Card(
         shape: RoundedRectangleBorder(
@@ -109,10 +96,12 @@ class _RegisterShopState extends State<RegisterShop> {
                           keyboardType: TextInputType.numberWithOptions(decimal: false),
                           controller: _shopTax,
                           validator: (data){
-                            if(data.length != 13){
+                            if(data.isEmpty){
+                              return null;
+                            }else if(data.length != 13){
                               return 'Please count tax invoice';
                             }else{
-                              return null;
+                            return null;
                             }
                           },
                           decoration: InputDecoration(
@@ -311,7 +300,11 @@ class _RegisterShopState extends State<RegisterShop> {
                         Container(
                           width: MediaQuery.of(context).size.width,
                           child: RaisedButton(
-                            onPressed: (){},
+                            onPressed: (){
+                              if(_formKey.currentState.validate()){
+
+                              }
+                            },
                             elevation: 1.0,
                             color: Colors.red[200],
                             shape: RoundedRectangleBorder(

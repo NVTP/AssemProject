@@ -1,4 +1,5 @@
 import 'package:assem_deal/customer/register_customer.dart';
+import 'package:assem_deal/shop/register_shop.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -39,7 +40,7 @@ class _LoginUIState extends State<LoginUI> {
            ),
          ),
          Container(
-           alignment: Alignment.center,
+           alignment: Alignment.bottomCenter,
             child: SingleChildScrollView(
              child: Column(
                  mainAxisAlignment: MainAxisAlignment.center,
@@ -199,53 +200,46 @@ class _LoginUIState extends State<LoginUI> {
                    ),
                    Padding(
                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                     child: Container(
-                       width: MediaQuery.of(context).size.width,
-                       child: Row(
-                         mainAxisAlignment: MainAxisAlignment.center,
-                         children: <Widget>[
-                           FloatingActionButton(
-                             onPressed: (){
-                               //TODO
-                             },
-                             elevation: 1.0,
-                             child: Icon(
-                               FontAwesomeIcons.facebookF,
-                               color: Colors.white,
-                             ),
-                             backgroundColor: Color(0xFF3b5998),
-                           ),//FACEBOOK
-                           SizedBox(
-                             width: 20.0,
-                           ),
-                           FloatingActionButton(
-                             onPressed: (){
-                               //TODO
-                             },
-                             elevation: 1.0,
-                             child: Icon(
-                               FontAwesomeIcons.google,
-                               color: Colors.white,
-                             ),
-                             backgroundColor: Color(0xFFea4335),
-                           ),//GOOGLE
-                           SizedBox(
-                             width: 20.0,
-                           ),
-                           RaisedButton(
-                             elevation: 1.0,
+                     child: Row(
+                       mainAxisAlignment: MainAxisAlignment.center,
+                       children: <Widget>[
+                         RawMaterialButton(
+                           onPressed: (){},
+                           fillColor: Color(0xFF3B5998),
+                           shape: CircleBorder(),
+                           elevation: 3.0,
+                           child: Icon(
+                             FontAwesomeIcons.facebookF,
                              color: Colors.white,
-                             shape: RoundedRectangleBorder(
-                               borderRadius: BorderRadius.circular(20),
-                             ),
-                             onPressed: (){
-                              // print('OK');
-                               //TODO
-                             },
-                             child: Text('Register Now', style: TextStyle(color: Colors.blueGrey,fontWeight: FontWeight.bold),),
+                             size: 20.0,
                            ),
-                         ],
-                       ),
+                         ),
+                         RawMaterialButton(
+                           onPressed: (){},
+                           fillColor: Color(0xFFEA435),
+                           shape: CircleBorder(),
+                           elevation: 0.1,
+                           child: Icon(
+                             FontAwesomeIcons.google,
+                             color: Colors.white,
+                             size: 20.0,
+                           ),
+                         ),
+                         RaisedButton(
+                           onPressed: (){
+                             // print('OK');
+                             Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => RegisterCustomer())
+                             );
+                           },
+                           elevation: 1.0,
+                           color: Colors.white,
+                           shape: RoundedRectangleBorder(
+                             borderRadius: BorderRadius.circular(20),
+                           ),
+                           child: Text('Register Now', style: TextStyle(color: Colors.blueGrey,fontWeight: FontWeight.bold),),
+                         ),
+                       ],
                      ),
                    ),//BUTTON
                    SizedBox(
@@ -263,18 +257,27 @@ class _LoginUIState extends State<LoginUI> {
                    ),
                    Padding(
                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                     child: RaisedButton(
-                       color: Colors.white,
-                       onPressed: (){
-                         //TODO
-                         //print('OK');
-                       },
-                       elevation: 10,
-                       shape: RoundedRectangleBorder(
-                         borderRadius: BorderRadius.circular(20.0),
+                     child: Container(
+                       height: 40.0,
+                       child: RaisedButton(
+                         color: Colors.white,
+                         onPressed: (){
+                           //TODO
+                           //print('OK');
+                           Navigator.push(context,
+                            MaterialPageRoute(builder: (context)=> RegisterShop())
+                           );
+                         },
+                         elevation: 10,
+                         shape: RoundedRectangleBorder(
+                           borderRadius: BorderRadius.circular(20.0),
+                         ),
+                         child: Text('Register for Shop', style: TextStyle(fontSize: 20.0, color: Colors.blueGrey),),
                        ),
-                       child: Text('Register for Shop', style: TextStyle(fontSize: 20.0, color: Colors.blueGrey),),
                      ),
+                   ),
+                   SizedBox(
+                     height: 20.0,
                    ),
                  ],
                ),

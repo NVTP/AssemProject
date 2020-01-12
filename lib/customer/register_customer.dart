@@ -1,4 +1,3 @@
-import 'package:assem_deal/login_ui.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
@@ -44,26 +43,11 @@ class _RegisterCustomerState extends State<RegisterCustomer> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomPadding: false,
       appBar: AppBar(
-        title: Row(
-          children: <Widget>[
-            IconButton(
-              onPressed: (){
-                //print('OK');
-              //TODO
-               //print('OK');
-              },
-              icon: Icon(
-                Icons.arrow_back_ios,
-              ),
-              color: Colors.white,
-            ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 40.0),
-                child: Text('Register Customer', style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold,color: Colors.white),),
-              ),
-          ],
-        ),
+        centerTitle: true,
+        title: Text('Register Customer',
+          style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold,color: Colors.white),),
         backgroundColor: Colors.red[200],
       ),
       body: SingleChildScrollView(
