@@ -1,10 +1,11 @@
 import 'package:assem_deal/customer/main_customer.dart';
 import 'package:assem_deal/login_ui.dart';
+import 'package:assem_deal/shop/main_shop.dart';
 import 'package:flutter/material.dart';
 
 main() => runApp(
   MaterialApp(
-    home: MainCustomer(),
+    home: LoginUI(),
     debugShowCheckedModeBanner: false,
     theme: ThemeData(
       brightness: Brightness.light,

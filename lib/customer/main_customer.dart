@@ -1,4 +1,4 @@
-import 'package:assem_deal/customer/cart_customer.dart';
+import 'package:assem_deal/customer/cart_event.dart';
 import 'package:assem_deal/customer/create_event.dart';
 import 'package:assem_deal/customer/home_customer.dart';
 import 'package:assem_deal/customer/noti_customer.dart';
@@ -16,7 +16,7 @@ class _MainCustomerState extends State<MainCustomer> {
     HomeCustomer(),
     NotificationCustomer(),
     CreateEvent(),
-    CartCustomer(),
+    CartEvent(),
     ProfileCustomer()
   ];
 
@@ -34,7 +34,6 @@ class _MainCustomerState extends State<MainCustomer> {
     return Scaffold(
       body: show_screen,
       bottomNavigationBar: Container(
-        color: Colors.red[200],
         child: BottomNavigationBar(
           onTap: (value_data){
             setState(() {
@@ -44,62 +43,57 @@ class _MainCustomerState extends State<MainCustomer> {
           },
           currentIndex: c_index,
           type: BottomNavigationBarType.fixed,
-          fixedColor: Colors.yellowAccent,
+          fixedColor: Colors.red[600],
           items: [
             BottomNavigationBarItem(
               activeIcon: Icon(
-                  Icons.local_airport
+                  Icons.home
               ),
               icon: Icon(
-                  Icons.local_airport
+                  Icons.home,
+                color: Colors.blueGrey,
               ),
-              title: Text(
-                'First',
-              ),
+              title: Text('Home',style: TextStyle(fontSize: 10),),
             ),
             BottomNavigationBarItem(
               activeIcon: Icon(
-                  Icons.add_to_photos
+                  Icons.notifications
               ),
               icon: Icon(
-                  Icons.add_to_photos
+                  Icons.notifications,
+                color: Colors.blueGrey,
               ),
-              title: Text(
-                  'Second'
-              ),
+              title: Text('Notifications',style: TextStyle(fontSize: 10),),
             ),
             BottomNavigationBarItem(
               activeIcon: Icon(
-                  Icons.airline_seat_recline_extra
+                  Icons.add_box
               ),
               icon: Icon(
-                  Icons.airline_seat_recline_extra
+                  Icons.add_box,
+                color: Colors.blueGrey,
               ),
-              title: Text(
-                  'Third'
-              ),
+              title: Text('Create',style: TextStyle(fontSize: 10),),
             ),
             BottomNavigationBarItem(
               activeIcon: Icon(
-                  Icons.accessibility_new
+                  Icons.shopping_cart
               ),
               icon: Icon(
-                  Icons.accessibility_new
+                  Icons.shopping_cart,
+                color: Colors.blueGrey,
               ),
-              title: Text(
-                  'Four'
-              ),
+              title: Text('Cart',style: TextStyle(fontSize: 10),),
             ),
             BottomNavigationBarItem(
               activeIcon: Icon(
-                  Icons.lock
+                  Icons.person
               ),
               icon: Icon(
-                  Icons.lock
+                  Icons.person,
+                color: Colors.blueGrey,
               ),
-              title: Text(
-                  'Five'
-              ),
+              title: Text('Profile',style: TextStyle(fontSize: 10),),
             ),
           ],
         ),

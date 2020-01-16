@@ -91,6 +91,8 @@ class _RegisterCustomerState extends State<RegisterCustomer> {
                           height: 12.0,
                         ),
                         TextFormField(
+                          maxLines: 1,
+                         keyboardType: TextInputType.text,
                          controller: _cusFName,
                          validator: (value){
                            if(value.isEmpty){
@@ -118,6 +120,8 @@ class _RegisterCustomerState extends State<RegisterCustomer> {
                           height: 15.0,
                         ),
                         TextFormField(
+                          keyboardType: TextInputType.text,
+                          maxLines: 1,
                           controller: _cusLName,
                           validator: (value){
                             if(value.isEmpty){
@@ -195,6 +199,7 @@ class _RegisterCustomerState extends State<RegisterCustomer> {
                           height: 20.0,
                         ),
                         TextFormField(
+                          maxLines: 1,
                           controller: _cusUsername,
                           validator: (value){
                             if(value.isEmpty){
@@ -221,6 +226,7 @@ class _RegisterCustomerState extends State<RegisterCustomer> {
                           height: 10.0,
                         ),
                         TextFormField(
+                          maxLines: 1,
                           controller: _cusPassword,
                           obscureText: showPW,
                           keyboardType: TextInputType.visiblePassword,
@@ -263,6 +269,7 @@ class _RegisterCustomerState extends State<RegisterCustomer> {
                           height: 10.0,
                         ),
                         TextFormField(
+                          maxLines: 1,
                           keyboardType: TextInputType.emailAddress,
                           controller: _cusEmail,
                           validator: (value){
@@ -291,6 +298,8 @@ class _RegisterCustomerState extends State<RegisterCustomer> {
                           height: 10.0,
                         ),
                         TextFormField(
+                          maxLength: 10,
+                          maxLines: 1,
                           keyboardType: TextInputType.phone,
                           controller: _cusPhone,
                           validator: (value){
