@@ -110,15 +110,15 @@ class _RegisterShopState extends State<RegisterShop> {
                             decoration: InputDecoration(
                               prefixIcon: Icon(
                                 Icons.attachment,
-                                color: Colors.red[200],
+                                color: Colors.blueGrey[200],
                               ),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20),
                               ),
                               hintText: 'Tax Invoice',
-                              hintStyle: TextStyle(color: Colors.red[200]),
+                              hintStyle: TextStyle(color: Colors.blueGrey[200]),
                               labelText: 'Tax Invoice',
-                              labelStyle: TextStyle(color: Colors.red[200]),
+                              labelStyle: TextStyle(color: Colors.blueGrey[200]),
                             ),
                           ),//TAX INVOICE
                           SizedBox(
@@ -137,15 +137,15 @@ class _RegisterShopState extends State<RegisterShop> {
                             decoration: InputDecoration(
                               prefixIcon: Icon(
                                 Icons.person,
-                                color: Colors.red[200],
+                                color: Colors.blueGrey[200],
                               ),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20),
                               ),
                               hintText: 'Username',
-                              hintStyle: TextStyle(color: Colors.red[200]),
+                              hintStyle: TextStyle(color: Colors.blueGrey[200]),
                               labelText: 'Username',
-                              labelStyle: TextStyle(color: Colors.red[200]),
+                              labelStyle: TextStyle(color: Colors.blueGrey[200]),
                             ),
                           ),//USERNAME
                           SizedBox(
@@ -164,15 +164,15 @@ class _RegisterShopState extends State<RegisterShop> {
                             decoration: InputDecoration(
                               prefixIcon: Icon(
                                 Icons.vpn_key,
-                                color: Colors.red[200],
+                                color: Colors.blueGrey[200],
                               ),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20),
                               ),
                               hintText: 'Username',
-                              hintStyle: TextStyle(color: Colors.red[200]),
+                              hintStyle: TextStyle(color: Colors.blueGrey[200]),
                               labelText: 'Username',
-                              labelStyle: TextStyle(color: Colors.red[200]),
+                              labelStyle: TextStyle(color: Colors.blueGrey[200]),
                               suffixIcon: IconButton(
                                 onPressed: (){
                                   setState(() {
@@ -206,15 +206,15 @@ class _RegisterShopState extends State<RegisterShop> {
                             decoration: InputDecoration(
                               prefixIcon: Icon(
                                 Icons.email,
-                                color: Colors.red[200],
+                                color: Colors.blueGrey[200],
                               ),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20),
                               ),
                               hintText: 'Email',
-                              hintStyle: TextStyle(color: Colors.red[200]),
+                              hintStyle: TextStyle(color: Colors.blueGrey[200]),
                               labelText: 'Email',
-                              labelStyle: TextStyle(color: Colors.red[200]),
+                              labelStyle: TextStyle(color: Colors.blueGrey[200]),
                             ),
                           ),//EMAIL
                           SizedBox(
@@ -237,15 +237,15 @@ class _RegisterShopState extends State<RegisterShop> {
                             decoration: InputDecoration(
                               prefixIcon: Icon(
                                 Icons.phone,
-                                color: Colors.red[200],
+                                color: Colors.blueGrey[200],
                               ),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20),
                               ),
                               hintText: 'PHONE',
-                              hintStyle: TextStyle(color: Colors.red[200]),
+                              hintStyle: TextStyle(color: Colors.blueGrey[200]),
                               labelText: 'PHONE',
-                              labelStyle: TextStyle(color: Colors.red[200]),
+                              labelStyle: TextStyle(color: Colors.blueGrey[200]),
                             ),
                           ),//PHONE
                           SizedBox(
@@ -265,15 +265,15 @@ class _RegisterShopState extends State<RegisterShop> {
                             decoration: InputDecoration(
                               prefixIcon: Icon(
                                 Icons.home,
-                                color: Colors.red[200],
+                                color: Colors.blueGrey[200],
                               ),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20),
                               ),
                               hintText: 'Address',
-                              hintStyle: TextStyle(color: Colors.red[200]),
+                              hintStyle: TextStyle(color: Colors.blueGrey[200]),
                               labelText: 'Address',
-                              labelStyle: TextStyle(color: Colors.red[200]),
+                              labelStyle: TextStyle(color: Colors.blueGrey[200]),
                             ),
                           ),//ADDRESS
                           SizedBox(
@@ -292,15 +292,15 @@ class _RegisterShopState extends State<RegisterShop> {
                             decoration: InputDecoration(
                               prefixIcon: Icon(
                                 Icons.person_outline,
-                                color: Colors.red[200],
+                                color: Colors.blueGrey[200],
                               ),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20),
                               ),
                               hintText: 'Shop Name',
-                              hintStyle: TextStyle(color: Colors.red[200]),
+                              hintStyle: TextStyle(color: Colors.blueGrey[200]),
                               labelText: 'Shop Name',
-                              labelStyle: TextStyle(color: Colors.red[200]),
+                              labelStyle: TextStyle(color: Colors.blueGrey[200]),
                             ),
                           ),//SHOP NAME
                           SizedBox(
@@ -315,7 +315,7 @@ class _RegisterShopState extends State<RegisterShop> {
                                 }
                               },
                               elevation: 1.0,
-                              color: Colors.red[200],
+                              color: Colors.blueGrey[400],
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(20),
                               ),

@@ -25,7 +25,7 @@ class _CartEventState extends State<CartEvent> with SingleTickerProviderStateMix
         bottom: TabBar(
           unselectedLabelColor: Colors.grey,
           labelColor: Colors.white,
-          indicatorColor: Colors.transparent,
+          indicatorColor: Colors.black,
           controller: tabController,
           tabs: <Widget>[
             Tab(

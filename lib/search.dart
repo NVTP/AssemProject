@@ -1,12 +1,4 @@
-import 'package:flappy_search_bar/flappy_search_bar.dart';
 import 'package:flutter/material.dart';
-
-class Post{
-  final String title;
-  final String description;
-
-  Post(this.title,this.description);
-}
 
 class Search extends StatefulWidget {
   @override
@@ -14,30 +6,39 @@ class Search extends StatefulWidget {
 }
 
 class _SearchState extends State<Search> {
-  Future<List<Post>> search(String search) async{
-    await Future.delayed(Duration(seconds: 2));
-    return List.generate(search.length, (int index){
-      return Post(
-          'Titile : $search $index',
-          'Description : $search $index',
-      );
-    });
-  }
+  final _formKey = GlobalKey<FormState>();
+  TextEditingController _search;
 
+  @override
+  void initState() {
+    // TODO: implement initState
+    _search = TextEditingController();
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20),
-          child: SearchBar<Post>(
-            onSearch: search,
-            onItemFound: (Post post, int index){
-              return ListTile(
-                title: Text(post.title),
-                subtitle: Text(post.title),
-              );
-            },
+      appBar: AppBar(
+        title: Form(
+          key: _formKey,
+          child: TextFormField(
+            maxLines: 1,
+            autofocus: true,
+            keyboardType: TextInputType.text,
+            controller: _search,
+            decoration: InputDecoration(
+              hintText: 'Search ',
+              hintStyle: TextStyle(color: Colors.grey[200]),
+              suffixIcon: IconButton(
+                onPressed: (){
+                  setState(() {
+                    _search.clear();
+                  });
+                },
+                icon: Icon(Icons.cancel),
+                color: Colors.grey[200],
+              ),
+            ),
           ),
         ),
       ),

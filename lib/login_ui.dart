@@ -1,4 +1,4 @@
-import 'package:assem_deal/customer/main_customer.dart';
+import 'package:assem_deal/customer/controlPageCustomer/main_customer.dart';
 import 'package:assem_deal/customer/register_customer.dart';
 import 'package:assem_deal/shop/main_shop.dart';
 import 'package:assem_deal/shop/register_shop.dart';
@@ -33,10 +33,10 @@ class _LoginUIState extends State<LoginUI> {
                begin: Alignment.bottomLeft,
                   end: Alignment.topRight,
                   colors: [
-                    Colors.red[100],
-                    Colors.red[300],
-                    Colors.red,
-                    Colors.red[700],
+                    Colors.blueGrey[100],
+                    Colors.blueGrey[300],
+                    Colors.blueGrey,
+                    Colors.blueGrey[700],
                   ]
              ),
            ),
@@ -63,7 +63,7 @@ class _LoginUIState extends State<LoginUI> {
                                padding: const EdgeInsets.only(top: 20.0),
                                child: Column(
                                  children: <Widget>[
-                                   Text('Login',style: TextStyle(color: Colors.red[200], fontSize: 30.0, fontWeight: FontWeight.bold),),
+                                   Text('Login',style: TextStyle(color: Colors.blueGrey[800], fontSize: 30.0, fontWeight: FontWeight.bold),),
                                    SizedBox(
                                      height: 10.0,
                                    ),
@@ -84,10 +84,10 @@ class _LoginUIState extends State<LoginUI> {
                                        decoration: InputDecoration(
                                          prefixIcon: Icon(
                                            Icons.person,
-                                           color: Colors.red[200],
+                                           color: Colors.blueGrey[200],
                                          ),
-                                         hintText: 'Username',hintStyle: TextStyle(color: Colors.red[200]),
-                                         labelText: 'Username',labelStyle: TextStyle(color: Colors.red[200]),
+                                         hintText: 'Username',hintStyle: TextStyle(color: Colors.blueGrey[200]),
+                                         labelText: 'Username',labelStyle: TextStyle(color: Colors.blueGrey[200]),
                                          border: OutlineInputBorder(
                                            borderRadius: BorderRadius.circular(20),
                                          ),
@@ -116,10 +116,10 @@ class _LoginUIState extends State<LoginUI> {
                                        decoration: InputDecoration(
                                          prefixIcon: Icon(
                                            Icons.lock,
-                                           color: Colors.red[200],
+                                           color: Colors.blueGrey[200],
                                          ),
-                                         hintText: 'Password',hintStyle: TextStyle(color: Colors.red[200]),
-                                         labelText: 'Password',labelStyle: TextStyle(color: Colors.red[200]),
+                                         hintText: 'Password',hintStyle: TextStyle(color: Colors.blueGrey[200]),
+                                         labelText: 'Password',labelStyle: TextStyle(color: Colors.blueGrey[200]),
                                          suffixIcon: IconButton(
                                            onPressed: (){
                                              setState(() {
@@ -162,7 +162,7 @@ class _LoginUIState extends State<LoginUI> {
                                              }
                                          },
                                          elevation: 1.0,
-                                         color: Colors.red[200],
+                                         color: Colors.blueGrey[200],
                                          shape: RoundedRectangleBorder(
                                            borderRadius: BorderRadius.circular(20),
                                          ),
@@ -229,7 +229,7 @@ class _LoginUIState extends State<LoginUI> {
                            ),
                            RawMaterialButton(
                              onPressed: (){},
-                             fillColor: Color(0xFFEA435),
+                             fillColor: Color(0xFFEA4335),
                              shape: CircleBorder(),
                              elevation: 0.1,
                              child: Icon(

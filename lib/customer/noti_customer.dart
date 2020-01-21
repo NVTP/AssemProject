@@ -16,131 +16,144 @@ class _NotificationCustomerState extends State<NotificationCustomer> {
       body: SafeArea(
           child: ListView(
             children: <Widget>[
-              Column(
-                children: <Widget>[
-                  SizedBox(
-                    height: 10.0,
-                  ),
-                  Card(
-                    elevation: 9.8,
-                    child: ListTile(
-                      onTap: (){},
-                      leading: Image.asset('assets/images/puma.png',height: 100.0,fit: BoxFit.cover,),
-                      title: Container(
-                        width: MediaQuery.of(context).size.width,
-                        child: Column(
+              SizedBox(
+                height: 10.0,
+              ),
+              ListTile(
+                onTap: (){},
+                leading: CircleAvatar(
+                  backgroundImage: AssetImage('assets/prototype/sony.jpg'),
+                  backgroundColor: Colors.transparent,
+                  radius: 30,
+                ),
+                title: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Text('Sony wf-1000xm3'),
+                    Container(
+                        child: Row(
                           children: <Widget>[
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: <Widget>[
-                                Text('PUMA', style: TextStyle(color: Colors.blueGrey),),
-                                SizedBox(width: 15.0,),
-                                Icon(Icons.watch_later,color: Colors.blueGrey,),
-                                Text('2020/1/19',style: TextStyle(color: Colors.blueGrey),),
-                              ],
-                            ),
-                            Row(
-                              children: <Widget>[
-                                RaisedButton(
-                                  onPressed: (){},
-                                  elevation: 9.8,
-                                  color: Colors.blueGrey,
-                                  child: Text('OK',style: TextStyle(color: Colors.white),),
-                                ),
-                                SizedBox(width: 10.0,),
-                                RaisedButton(
-                                  onPressed: (){},
-                                  elevation: 9.8,
-                                  child: Text('Cancel'),
-                                ),
-                              ],
-                            ),
+                            Icon(Icons.access_time),
+                            Text('2020/1/16'),
                           ],
+                        ),
+                    ),
+                  ],
+                ),
+                subtitle: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    Expanded(
+                      flex: 1,
+                      child: Container(
+                        width: MediaQuery.of(context).size.width,
+                        child: RaisedButton(
+                          onPressed: (){},
+                          elevation: 1.1,
+                          child: Text('OK',style: TextStyle(color: Colors.white),),
+                          color: Colors.blueGrey,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10)
+                          ),
                         ),
                       ),
                     ),
-                  ),//PUMA
-                  SizedBox(height: 5.0,),
-                  Card(
-                    elevation: 9.8,
-                    child: ListTile(
-                      onTap: (){},
-                      leading: Image.asset('assets/images/nike.png',height: 100.0,fit: BoxFit.cover,),
-                      title: Container(
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Expanded(
+                      flex: 1,
+                      child: Container(
                         width: MediaQuery.of(context).size.width,
-                        child: Column(
-                          children: <Widget>[
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: <Widget>[
-                                Text('NIKE', style: TextStyle(color: Colors.blueGrey),),
-                                SizedBox(width: 15.0,),
-                                Icon(Icons.watch_later,color: Colors.blueGrey,),
-                                Text('2020/1/21',style: TextStyle(color: Colors.blueGrey),),
-                              ],
-                            ),
-                            Row(
-                              children: <Widget>[
-                                RaisedButton(
-                                  onPressed: (){},
-                                  elevation: 9.8,
-                                  color: Colors.blueGrey,
-                                  child: Text('OK',style: TextStyle(color: Colors.white),),
-                                ),
-                                SizedBox(width: 10.0,),
-                                RaisedButton(
-                                  onPressed: (){},
-                                  elevation: 9.8,
-                                  child: Text('Cancel'),
-                                ),
-                              ],
-                            ),
-                          ],
+                        child: RaisedButton(
+                          onPressed: (){},
+                          elevation: 1.1,
+                          child: Text('Cancel',style: TextStyle(color: Colors.white),),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10)
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  SizedBox(height: 5.0,),
-                  Card(
-                    elevation: 9.8,
-                    child: ListTile(
-                      onTap: (){},
-                      leading: Image.asset('assets/images/intel.png',width: 100.0,fit: BoxFit.cover,),
-                      title: Container(
-                        width: MediaQuery.of(context).size.width,
-                        child: Column(
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                child: Divider(
+                  height: 2.0,
+                  color: Colors.blueGrey,
+                ),
+              ),
+              SizedBox(
+                height: 10.0,
+              ),
+              ListTile(
+                onTap: (){},
+                leading: CircleAvatar(
+                  backgroundImage: AssetImage('assets/prototype/timbuk.jpg'),
+                  backgroundColor: Colors.transparent,
+                  radius: 30,
+                ),
+                title: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Text('Timbuk 2'),
+                    Container(
+                        child: Row(
                           children: <Widget>[
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: <Widget>[
-                                Text('APPLE', style: TextStyle(color: Colors.blueGrey),),
-                                SizedBox(width: 15.0,),
-                                Icon(Icons.watch_later,color: Colors.blueGrey,),
-                                Text('2020/1/19',style: TextStyle(color: Colors.blueGrey),),
-                              ],
-                            ),
-                            Row(
-                              children: <Widget>[
-                                RaisedButton(
-                                  onPressed: (){},
-                                  elevation: 9.8,
-                                  color: Colors.blueGrey,
-                                  child: Text('OK',style: TextStyle(color: Colors.white),),
-                                ),
-                                SizedBox(width: 10.0,),
-                                RaisedButton(
-                                  onPressed: (){},
-                                  elevation: 9.8,
-                                  child: Text('Cancel'),
-                                ),
-                              ],
-                            ),
+                            Icon(Icons.access_time),
+                            Text('2020/1/16'),
                           ],
+                        )
+                    ),
+                  ],
+                ),
+                subtitle: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    Expanded(
+                      flex: 1,
+                      child: Container(
+                        width: MediaQuery.of(context).size.width,
+                        child: RaisedButton(
+                          onPressed: (){},
+                          elevation: 1.1,
+                          child: Text('OK',style: TextStyle(color: Colors.white),),
+                          color: Colors.blueGrey,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10)
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                ],
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Expanded(
+                      flex: 1,
+                      child: Container(
+                        width: MediaQuery.of(context).size.width,
+                        child: RaisedButton(
+                          onPressed: (){},
+                          elevation: 1.1,
+                          child: Text('Cancel',style: TextStyle(color: Colors.white),),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10)
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                child: Divider(
+                  height: 2.0,
+                  color: Colors.blueGrey,
+                ),
               ),
             ],
           ),

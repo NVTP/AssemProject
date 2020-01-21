@@ -1,3 +1,4 @@
+import 'package:assem_deal/customer/controlPageCustomer/main_event.dart';
 import 'package:flutter/material.dart';
 import '../search.dart';
 
@@ -10,46 +11,43 @@ class _HomeCustomerState extends State<HomeCustomer> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        actions: <Widget>[
+          InkWell(
+            onTap: (){
+              Navigator.push(context,
+                MaterialPageRoute(
+                  builder: (context)=>Search()
+                )
+              );
+            },
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              color: Colors.grey[100],
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20.0,right: 10.0),
+                    child: Icon(
+                      Icons.search,
+                      color: Colors.grey,
+                    ),
+                  ),
+                  Text('Search',style: TextStyle(color: Colors.grey,fontSize: 18),),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
       body: Stack(
         fit: StackFit.expand,
         children: <Widget>[
           SafeArea(
             child: Column(
               children: <Widget>[
-                Container(
-                  alignment: Alignment.topCenter,
-                  height: 60.0,
-                  width: MediaQuery.of(context).size.width,
-                  color: Colors.grey,
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10.0),
-                    child: RaisedButton(
-                      elevation: 1.0,
-                      onPressed: (){
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context)=>Search())
-                        );
-                      },
-                      color: Colors.blueGrey,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: <Widget>[
-                          Icon(
-                            Icons.search,
-                            color: Colors.white70,
-                          ),
-                          SizedBox(
-                            width: 12.0,
-                          ),
-                          Text('Search',style: TextStyle(color: Colors.white70,fontSize: 20.0,fontWeight: FontWeight.bold),),
-                        ],
-                      ),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20)
-                      ),
-                    ),//SEARCH
-                  ),
-                ),
                 SizedBox(
                   height: 10.0,
                 ),
@@ -200,24 +198,31 @@ class _HomeCustomerState extends State<HomeCustomer> {
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: <Widget>[
                                         Padding(
-                                          padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                                          child: Row(
+                                          padding: const EdgeInsets.symmetric(horizontal: 10.0,vertical: 10.0),
+                                           child: Row(
                                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                             crossAxisAlignment: CrossAxisAlignment.start,
                                             children: <Widget>[
                                               InkWell(
-                                                onTap: (){},
+                                                onTap: (){
+                                                  Navigator.push(context,
+                                                    MaterialPageRoute(
+                                                      builder: (context)=>MainEvent()
+                                                    )
+                                                  );
+                                                },
                                                 child: Column(
                                                   children: <Widget>[
                                                     Container(
                                                       margin: EdgeInsets.symmetric(horizontal: 5.0),
                                                       height: 150,
+                                                      width: 150,
                                                       decoration: BoxDecoration(
                                                           borderRadius: BorderRadius.circular(20)
                                                       ),
-                                                      child: Image.asset('assets/prototype/stan.jpg',height: 150,),
+                                                      child: Image.asset('assets/prototype/sony.jpg',fit: BoxFit.fill,),
                                                     ),
-                                                    Text('Adidas Stan smith',style: TextStyle(fontSize: 12.0,fontWeight: FontWeight.bold),),
+                                                    Text('Sony WF-1000xm3',style: TextStyle(fontSize: 12.0,fontWeight: FontWeight.bold),),
                                                     SizedBox(
                                                       height: 10.0,
                                                     ),
@@ -230,11 +235,12 @@ class _HomeCustomerState extends State<HomeCustomer> {
                                                   children: <Widget>[
                                                     Container(
                                                       margin: EdgeInsets.symmetric(horizontal: 5.0),
+                                                      width: 150,
                                                       height: 150,
                                                       decoration: BoxDecoration(
                                                           borderRadius: BorderRadius.circular(20)
                                                       ),
-                                                      child: Image.asset('assets/prototype/timbuk.jpg',),
+                                                      child: Image.asset('assets/prototype/timbuk.jpg',fit: BoxFit.fill,),
                                                     ),
                                                     Text('Timbuk 2',style: TextStyle(fontSize: 12.0,fontWeight: FontWeight.bold),),
                                                     SizedBox(
@@ -250,12 +256,13 @@ class _HomeCustomerState extends State<HomeCustomer> {
                                                     Container(
                                                       margin: EdgeInsets.symmetric(horizontal: 5.0),
                                                       height: 150,
+                                                      width: 150,
                                                       decoration: BoxDecoration(
                                                           borderRadius: BorderRadius.circular(20)
                                                       ),
-                                                      child: Image.asset('assets/prototype/sony.jpg',height: 70,),
+                                                      child: Image.asset('assets/prototype/stan.jpg',fit: BoxFit.fill,),
                                                     ),
-                                                    Text('Razer Gaming',style: TextStyle(fontSize: 12.0,fontWeight: FontWeight.bold),),
+                                                    Text('Adidas Stan Smith',style: TextStyle(fontSize: 12.0,fontWeight: FontWeight.bold),),
                                                     SizedBox(
                                                       height: 10.0,
                                                     ),
@@ -268,13 +275,14 @@ class _HomeCustomerState extends State<HomeCustomer> {
                                                   children: <Widget>[
                                                     Container(
                                                       margin: EdgeInsets.symmetric(horizontal: 5.0),
+                                                      width: 150,
                                                       height: 150,
                                                       decoration: BoxDecoration(
                                                           borderRadius: BorderRadius.circular(20)
                                                       ),
-                                                      child: Image.asset('assets/prototype/stan.jpg'),
+                                                      child: Image.asset('assets/prototype/timbuk.jpg',fit: BoxFit.fill,),
                                                     ),
-                                                    Text('Adidas Stan smith',style: TextStyle(fontSize: 12.0,fontWeight: FontWeight.bold),),
+                                                    Text('Timbuk 2',style: TextStyle(fontSize: 12.0,fontWeight: FontWeight.bold),),
                                                     SizedBox(
                                                       height: 10.0,
                                                     ),
@@ -287,13 +295,14 @@ class _HomeCustomerState extends State<HomeCustomer> {
                                                   children: <Widget>[
                                                     Container(
                                                       margin: EdgeInsets.symmetric(horizontal: 5.0),
+                                                      width: 150,
                                                       height: 150,
                                                       decoration: BoxDecoration(
                                                           borderRadius: BorderRadius.circular(20)
                                                       ),
-                                                      child: Image.asset('assets/prototype/stan.jpg'),
+                                                      child: Image.asset('assets/prototype/timbuk.jpg',fit: BoxFit.fill,),
                                                     ),
-                                                    Text('Adidas Stan smith',style: TextStyle(fontSize: 12.0,fontWeight: FontWeight.bold),),
+                                                    Text('Timbuk 2',style: TextStyle(fontSize: 12.0,fontWeight: FontWeight.bold),),
                                                     SizedBox(
                                                       height: 10.0,
                                                     ),
@@ -347,7 +356,7 @@ class _HomeCustomerState extends State<HomeCustomer> {
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: <Widget>[
                                         Padding(
-                                          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                                          padding: const EdgeInsets.symmetric(horizontal: 10.0,vertical: 10.0),
                                           child: Row(
                                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -359,10 +368,11 @@ class _HomeCustomerState extends State<HomeCustomer> {
                                                     Container(
                                                       margin: EdgeInsets.symmetric(horizontal: 5.0),
                                                       height: 150,
+                                                      width: 150,
                                                       decoration: BoxDecoration(
                                                           borderRadius: BorderRadius.circular(20)
                                                       ),
-                                                      child: Image.asset('assets/prototype/levis.jpg',height: 150,),
+                                                      child: Image.asset('assets/prototype/levis.jpg',fit: BoxFit.fill,),
                                                     ),
                                                     Row(
                                                         children: <Widget>[
@@ -387,10 +397,11 @@ class _HomeCustomerState extends State<HomeCustomer> {
                                                     Container(
                                                       margin: EdgeInsets.symmetric(horizontal: 5.0),
                                                       height: 150,
+                                                      width: 150,
                                                       decoration: BoxDecoration(
                                                           borderRadius: BorderRadius.circular(20)
                                                       ),
-                                                      child: Image.asset('assets/prototype/intel.jpg',height: 150,),
+                                                      child: Image.asset('assets/prototype/intel.jpg',fit: BoxFit.fill,),
                                                     ),
                                                     Row(
                                                       children: <Widget>[
@@ -415,10 +426,11 @@ class _HomeCustomerState extends State<HomeCustomer> {
                                                     Container(
                                                       margin: EdgeInsets.symmetric(horizontal: 5.0),
                                                       height: 150,
+                                                      width: 150,
                                                       decoration: BoxDecoration(
                                                           borderRadius: BorderRadius.circular(20)
                                                       ),
-                                                      child: Image.asset('assets/prototype/timbuk.jpg',height: 150,),
+                                                      child: Image.asset('assets/prototype/timbuk.jpg',fit: BoxFit.fill,),
                                                     ),
                                                     Row(
                                                       children: <Widget>[
@@ -443,10 +455,11 @@ class _HomeCustomerState extends State<HomeCustomer> {
                                                     Container(
                                                       margin: EdgeInsets.symmetric(horizontal: 5.0),
                                                       height: 150,
+                                                      width: 150,
                                                       decoration: BoxDecoration(
                                                           borderRadius: BorderRadius.circular(20)
                                                       ),
-                                                      child: Image.asset('assets/prototype/levis.jpg',height: 150,),
+                                                      child: Image.asset('assets/prototype/stan.jpg',fit: BoxFit.fill,),
                                                     ),
                                                     Row(
                                                       children: <Widget>[

@@ -1,4 +1,4 @@
-import 'package:assem_deal/customer/cart_event.dart';
+import 'package:assem_deal/customer/controlPageCustomer/cart_event.dart';
 import 'package:assem_deal/customer/create_event.dart';
 import 'package:assem_deal/customer/home_customer.dart';
 import 'package:assem_deal/customer/noti_customer.dart';
@@ -67,7 +67,7 @@ class _MainCustomerState extends State<MainCustomer> {
             ),
             BottomNavigationBarItem(
               activeIcon: Icon(
-                  Icons.add_box
+                  Icons.add_box,
               ),
               icon: Icon(
                   Icons.add_box,

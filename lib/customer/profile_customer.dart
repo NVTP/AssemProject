@@ -19,17 +19,20 @@ class _ProfileCustomerState extends State<ProfileCustomer> {
                   Container(
                     width: MediaQuery.of(context).size.width,
                     height: 170,
-                    color: Colors.red[200],
+                    color: Colors.blueGrey[600],
                   ),
                   Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
-                      Padding(
-                        padding: const EdgeInsets.only(top: 20,left: 20),
-                        child: CircleAvatar(
-                          radius: 60,
-                          backgroundImage: AssetImage('assets/prototype/virgil.jpg'),
+                      InkWell(
+                        onTap: (){},
+                        child: Padding(
+                          padding: const EdgeInsets.only(top: 20,left: 20),
+                          child: CircleAvatar(
+                            radius: 60,
+                            backgroundImage: AssetImage('assets/prototype/virgil.jpg'),
+                          ),
                         ),
                       ),
                         Padding(

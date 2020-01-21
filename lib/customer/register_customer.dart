@@ -48,7 +48,7 @@ class _RegisterCustomerState extends State<RegisterCustomer> {
         centerTitle: true,
         title: Text('Register Customer',
           style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold,color: Colors.white),),
-        backgroundColor: Colors.red[200],
+        backgroundColor: Colors.blueGrey[400],
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -104,12 +104,12 @@ class _RegisterCustomerState extends State<RegisterCustomer> {
                          decoration: InputDecoration(
                            prefixIcon: Icon(
                              Icons.person_outline,
-                             color: Colors.red[200],
+                             color: Colors.blueGrey[200],
                            ),
                            hintText: 'First Name',
                            focusColor: Colors.black,
                            labelText: 'First Name',
-                           labelStyle: TextStyle(color: Colors.red[200]),
+                           labelStyle: TextStyle(color: Colors.blueGrey[200]),
                            hintStyle: TextStyle(color: Colors.black),
                            border: OutlineInputBorder(
                              borderRadius: BorderRadius.circular(20),
@@ -133,12 +133,12 @@ class _RegisterCustomerState extends State<RegisterCustomer> {
                           decoration: InputDecoration(
                             prefixIcon: Icon(
                               Icons.person_outline,
-                              color: Colors.red[200],
+                              color: Colors.blueGrey[200],
                             ),
                             hintText: 'Last Name',
                             focusColor: Colors.black,
                             labelText: 'Last Name',
-                            labelStyle: TextStyle(color: Colors.red[200]),
+                            labelStyle: TextStyle(color: Colors.blueGrey[200]),
                             hintStyle: TextStyle(color: Colors.black),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(20),
@@ -180,7 +180,7 @@ class _RegisterCustomerState extends State<RegisterCustomer> {
                                       Icon(
                                         Icons.date_range,
                                         size: 18.0,
-                                        color: Colors.red[200],
+                                        color: Colors.blueGrey[200],
                                       ),
                                       Padding(
                                         padding: const EdgeInsets.only(left: 10.0),
@@ -213,10 +213,10 @@ class _RegisterCustomerState extends State<RegisterCustomer> {
                           decoration: InputDecoration(
                             prefixIcon: Icon(
                               Icons.person,
-                              color: Colors.red[200],
+                              color: Colors.blueGrey[200],
                             ),
-                            hintText: 'Username',hintStyle: TextStyle(color: Colors.red[200]),
-                            labelText: 'Username',labelStyle: TextStyle(color: Colors.red[200]),
+                            hintText: 'Username',hintStyle: TextStyle(color: Colors.blueGrey[200]),
+                            labelText: 'Username',labelStyle: TextStyle(color: Colors.blueGrey[200]),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(20),
                             ),
@@ -242,10 +242,10 @@ class _RegisterCustomerState extends State<RegisterCustomer> {
                           decoration: InputDecoration(
                             prefixIcon: Icon(
                               Icons.lock,
-                              color: Colors.red[200],
+                              color: Colors.blueGrey[200],
                             ),
-                            hintText: 'Password',hintStyle: TextStyle(color: Colors.red[200]),
-                            labelText: 'Password',labelStyle: TextStyle(color: Colors.red[200]),
+                            hintText: 'Password',hintStyle: TextStyle(color: Colors.blueGrey[200]),
+                            labelText: 'Password',labelStyle: TextStyle(color: Colors.blueGrey[200]),
                             suffixIcon: IconButton(
                               onPressed: (){
                                 setState(() {
@@ -282,12 +282,12 @@ class _RegisterCustomerState extends State<RegisterCustomer> {
                           decoration: InputDecoration(
                             prefixIcon: Icon(
                               Icons.email,
-                              color: Colors.red[200],
+                              color: Colors.blueGrey[200],
                             ),
                             hintText: 'Email',
                             focusColor: Colors.black,
                             labelText: 'Email',
-                            labelStyle: TextStyle(color: Colors.red[200]),
+                            labelStyle: TextStyle(color: Colors.blueGrey[200]),
                             hintStyle: TextStyle(color: Colors.black),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(20),
@@ -314,12 +314,12 @@ class _RegisterCustomerState extends State<RegisterCustomer> {
                           decoration: InputDecoration(
                             prefixIcon: Icon(
                               Icons.phone,
-                              color: Colors.red[200],
+                              color: Colors.blueGrey[200],
                             ),
                             hintText: 'Phone Number',
                             focusColor: Colors.black,
                             labelText: 'Phone Number',
-                            labelStyle: TextStyle(color: Colors.red[200]),
+                            labelStyle: TextStyle(color: Colors.blueGrey[200]),
                             hintStyle: TextStyle(color: Colors.black),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(20),
@@ -335,7 +335,7 @@ class _RegisterCustomerState extends State<RegisterCustomer> {
                               height: 50.0,
                             width: MediaQuery.of(context).size.width,
                             child: RaisedButton(
-                              color: Colors.red[200],
+                              color: Colors.blueGrey[400],
                               onPressed: (){
                                 if(_formKey.currentState.validate()){
 

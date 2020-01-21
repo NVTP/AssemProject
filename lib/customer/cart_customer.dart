@@ -16,7 +16,7 @@ class _CartCustomerState extends State<CartCustomer> {
                 InkWell(
                   onTap: (){},
                   child: Card(
-                    elevation: 9.8,
+                    elevation: 5.8,
                     margin: EdgeInsets.symmetric(vertical: 10.0),
                     child: Container(
                       width: MediaQuery.of(context).size.width,
@@ -48,7 +48,7 @@ class _CartCustomerState extends State<CartCustomer> {
                 InkWell(
                   onTap: (){},
                   child: Card(
-                    elevation: 9.8,
+                    elevation: 5.8,
                     margin: EdgeInsets.symmetric(vertical: 10.0),
                     child: Container(
                       width: MediaQuery.of(context).size.width,
