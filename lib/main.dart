@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 main() => runApp(
   MaterialApp(
-    home: MainCustomer(),
+    home: LoginUI(),
     debugShowCheckedModeBanner: false,
     theme: ThemeData(
       brightness: Brightness.light,

@@ -61,7 +61,7 @@ class _RegisterCustomerState extends State<RegisterCustomer> {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30.0),
                   ),
-                  elevation: 9.8,
+                  elevation: 1.1,
                   color: Colors.white,
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 15.0),

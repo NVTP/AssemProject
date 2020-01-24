@@ -65,7 +65,7 @@ class _EventCustomerState extends State<EventCustomer> {
                   width: MediaQuery.of(context).size.width,
                   child: RaisedButton(
                     color: Colors.white,
-                    onPressed: ()=>showSlideUpView(context),
+                    onPressed: ()=>showSlideUpView(),
                     elevation: 1.1,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)
@@ -75,7 +75,7 @@ class _EventCustomerState extends State<EventCustomer> {
                         child: RichText(
                           text: TextSpan(
                             text: 'Select variations ',
-                            style: DefaultTextStyle.of(context).style,
+                            style: TextStyle(color: Colors.black),
                             children: <TextSpan>[
                               TextSpan(text: '(e.g. color ,size)',style: TextStyle(color: Colors.grey[300])),
                             ],
@@ -157,25 +157,30 @@ class _EventCustomerState extends State<EventCustomer> {
     );
   }
 
-  void showSlideUpView(BuildContext context){
+  void showSlideUpView(){
     showModalBottomSheet(
         context: context,
         builder: (context){
           return Column(
             children: <Widget>[
-              Text('Hello'),
-              Text('Hello'),
-              Text('Hello'),
-              Text('Hello'),
-              Text('Hello'),
-              Text('Hello'),
+              Text('Ok'),
+              Text('Ok'),
+              Text('Ok'),
+              Text('Ok'),
+              Text('Ok'),
+              Text('Ok'),
+              Text('Ok'),
+              Text('Ok'),
               RaisedButton(
-                onPressed: ()=>Navigator.pop(context),
-                child: Text('Ok'),
+                onPressed: (){
+                  Navigator.pop(context);
+                },
+                child: Text('OK'),
               ),
             ],
           );
         }
     );
   }
+
 }

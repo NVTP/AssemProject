@@ -1,3 +1,4 @@
+import 'package:assem_deal/customer/controlPageCustomer/main_event.dart';
 import 'package:flutter/material.dart';
 
 class CartCusJoin extends StatefulWidget {
@@ -13,7 +14,11 @@ class _CartCusJoinState extends State<CartCusJoin> {
         child: ListView(
           children: <Widget>[
             InkWell(
-              onTap: (){},
+              onTap: (){
+                Navigator.push(context,
+                MaterialPageRoute(builder: (context)=>MainEvent())
+                );
+              },
               child: Card(
                 elevation: 5.8,
                 margin: EdgeInsets.symmetric(vertical: 10.0),

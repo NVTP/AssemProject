@@ -1,3 +1,6 @@
+import 'package:assem_deal/category/clothing.dart';
+import 'package:assem_deal/category/gadget.dart';
+import 'package:assem_deal/category/shoes.dart';
 import 'package:assem_deal/customer/controlPageCustomer/main_event.dart';
 import 'package:flutter/material.dart';
 import '../search.dart';
@@ -74,7 +77,13 @@ class _HomeCustomerState extends State<HomeCustomer> {
                                     crossAxisAlignment: CrossAxisAlignment.center,
                                     children: <Widget>[
                                       RawMaterialButton(
-                                        onPressed: (){},
+                                        onPressed: (){
+                                          Navigator.push(context,
+                                          MaterialPageRoute(
+                                            builder: (context)=>Clothing(),
+                                          )
+                                          );
+                                        },
                                         child: Image.asset(
                                           'assets/images/Clothing.png',
                                           color: Colors.blueGrey,
@@ -88,7 +97,13 @@ class _HomeCustomerState extends State<HomeCustomer> {
                                         ),
                                       ),
                                       RawMaterialButton(
-                                        onPressed: (){},
+                                        onPressed: (){
+                                          Navigator.push(context,
+                                          MaterialPageRoute(
+                                            builder: (context)=>Shoes(),
+                                          )
+                                          );
+                                        },
                                         child: Image.asset(
                                           'assets/images/shoes.png',
                                           color: Colors.blueGrey,
@@ -102,7 +117,11 @@ class _HomeCustomerState extends State<HomeCustomer> {
                                         ),
                                       ),
                                       RawMaterialButton(
-                                        onPressed: (){},
+                                        onPressed: (){
+                                          Navigator.push(context,
+                                          MaterialPageRoute(builder: (context)=>Gadget())
+                                          );
+                                        },
                                         child: Image.asset(
                                           'assets/images/Computer.png',
                                           color: Colors.blueGrey,
@@ -118,7 +137,7 @@ class _HomeCustomerState extends State<HomeCustomer> {
                                       RawMaterialButton(
                                         onPressed: (){},
                                         child: Image.asset(
-                                          'assets/images/phone.png',
+                                          'assets/images/cream.png',
                                           color: Colors.blueGrey,
                                           alignment: Alignment.center,
                                           fit: BoxFit.cover,
@@ -240,9 +259,9 @@ class _HomeCustomerState extends State<HomeCustomer> {
                                                       decoration: BoxDecoration(
                                                           borderRadius: BorderRadius.circular(20)
                                                       ),
-                                                      child: Image.asset('assets/prototype/timbuk.jpg',fit: BoxFit.fill,),
+                                                      child: Image.asset('assets/prototype/levis.jpg',fit: BoxFit.fill,),
                                                     ),
-                                                    Text('Timbuk 2',style: TextStyle(fontSize: 12.0,fontWeight: FontWeight.bold),),
+                                                    Text('Levi\'s',style: TextStyle(fontSize: 12.0,fontWeight: FontWeight.bold),),
                                                     SizedBox(
                                                       height: 10.0,
                                                     ),

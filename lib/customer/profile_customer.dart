@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class ProfileCustomer extends StatefulWidget {
   @override
@@ -102,7 +103,9 @@ class _ProfileCustomerState extends State<ProfileCustomer> {
                         height: 2.0,
                       ),
                       ListTile(
-                        onTap: (){},
+                        onTap: (){
+                          SystemNavigator.pop();
+                        },
                         leading: Icon(
                           Icons.power_settings_new,
                         ),
